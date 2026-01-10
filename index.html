@@ -1,95 +1,189 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daftar Game PS2, PS3, PS4</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #222;
-    }
-    header {
-      background: linear-gradient(135deg, #1e88e5, #fdd835);
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    header p {
-      margin-top: 8px;
-      font-size: 14px;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 15px;
-    }
-    .section {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .section h2 {
-      margin-top: 0;
-      border-left: 6px solid #1e88e5;
-      padding-left: 10px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-    }
-    li {
-      background: #f9fafb;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid #e0e0e0;
-      font-size: 14px;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 13px;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Rons Games Library</h1>
-    <p>PS2 • PS3 • PS4</p>
-  </header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rons Games | List Game PlayStation</title>
 
-  <div class="container">
-    <div class="section">
+<style>
+:root{
+--blue:#00cfff;
+--yellow:#ffd200;
+--dark:#050a14;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+background:radial-gradient(circle at top,#0b1f3a,#02060d);
+color:#e8f7ff;
+}
+
+header{
+text-align:center;
+padding:40px 20px;
+}
+
+.controller{
+width:120px;
+height:60px;
+margin:0 auto 15px;
+border-radius:40px;
+border:3px solid var(--blue);
+box-shadow:0 0 25px var(--blue);
+position:relative;
+}
+
+.controller::before,
+.controller::after{
+content:"";
+position:absolute;
+top:50%;
+width:18px;height:18px;
+background:var(--blue);
+border-radius:50%;
+transform:translateY(-50%);
+}
+
+.controller::before{left:25px}
+.controller::after{right:25px}
+
+.logo{
+font-size:42px;
+font-weight:900;
+color:var(--blue);
+text-shadow:0 0 25px var(--blue);
+}
+
+.subtitle{
+color:var(--yellow);
+letter-spacing:3px;
+margin-top:5px;
+}
+
+.search-box{
+max-width:400px;
+margin:25px auto;
+}
+
+input{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:none;
+outline:none;
+font-size:16px;
+background:#0c1627;
+color:#fff;
+box-shadow:0 0 15px rgba(0,200,255,.3);
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:linear-gradient(180deg,#0e1c33,#050a14);
+border:1px solid rgba(0,200,255,.4);
+border-radius:20px;
+padding:20px;
+box-shadow:inset 0 0 25px rgba(0,200,255,.1);
+}
+
+.card h2{
+text-align:center;
+color:var(--yellow);
+letter-spacing:2px;
+}
+
+ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+li{
+padding:10px;
+margin:8px 0;
+background:rgba(0,200,255,.1);
+border-radius:10px;
+border:1px solid rgba(0,200,255,.3);
+transition:.2s;
+}
+
+li:hover{
+background:rgba(255,210,0,.2);
+transform:translateX(6px);
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+text-align:center;
+font-size:13px;
+color:#7aaed1;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25d366;
+color:#fff;
+padding:14px 18px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 20px rgba(37,211,102,.6);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="controller"></div>
+  <div class="logo">RONS GAMES</div>
+  <div class="subtitle">LIST GAME PLAYSTATION</div>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Cari game...">
+  </div>
+</header>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- PS2 -->
+    <div class="card">
       <h2>🎮 Game PS2</h2>
-      <ul>
+      <ul class="games">
         <lI>PES 2026 TERBARU</lI>
-        <LI>WINNING ELEVEN 2026 TERBARU</LI>
-        <li>007 Everything or Nothing</li>
-        <li>ACE COMBAT 500</li>
-        <li>ACTION MAN</li>
-        <li>AGE EMPIRES</li>
-        <li>AIR FORCE DELTA STRIKE</li>
-        <li>AIR RAID</li>
-        <li>ALADDIN THE QUEST FOR TREASU</li>
-        <li>ALIEN VS PREDATOR</li>
-        <li>AMERICAN PRO TRUCKER</li>
-        <li>ANT WAR</li>
-        <li>ANUBIS</li>
-        <li>APE ESCAPE 3</li>
-        <li>ARMORED CORE 3</li>
-        <li>ARMY MEN</li>
+<LI>WINNING ELEVEN 2026 TERBARU</LI>
+<li>007 Everything or Nothing</li>        
+<li>ACE COMBAT 500</li>
+<li>ACTION MAN</li>                
+<li>AGE EMPIRES</li>        
+<li>AIR FORCE DELTA STRIKE</li>        
+<li>AIR RAID</li>        
+<li>ALADDIN THE QUEST FOR TREASU</li>        
+<li>ALIEN VS PREDATOR</li>        
+<li>AMERICAN PRO TRUCKER</li>        
+<li>ANT WAR</li>        
+<li>ANUBIS</li>        
+<li>APE ESCAPE 3</li>        
+<li>ARMORED CORE 3</li>        
+<li>ARMY MEN</li>        
         <li>ASTERIX & OBELIX</li>
         <li>ASTRO BOY</li>
         <li>AVATAR THE LAST AIR BENDER</li>
@@ -394,10 +488,11 @@
       </ul>
     </div>
 
-    <div class="section">
+    <!-- PS3 -->
+    <div class="card">
       <h2>🎮 Game PS3</h2>
-      <ul>
-        <LI>WE-PES GEMBOX PATCH 2026 REV 2 </LI>
+      <ul class="games">
+                <LI>WE-PES GEMBOX PATCH 2026 REV 2 </LI>                                
         <LI>PES BITBOX PATCH 2026 FINAL TRANSFER</LI>
         <li>FC 26</li>
         <LI> Ace Combat </LI>
@@ -533,21 +628,21 @@
         <LI> WWE 2K17 </LI>
         <LI> WWE SmackDown Pain </LI>
         <LI> XCOM Enemy Within </LI>
-
       </ul>
     </div>
 
-    <div class="section">
+    <!-- PS4 -->
+    <div class="card">
       <h2>🎮 Game PS4</h2>
-      <ul>
-        <LI>PES MONSTER PATCH 2026</LI>
+      <ul class="games">
+       <LI>PES MONSTER PATCH 2026</LI>
         <li>FC 26</li>
         <LI>SGR PATCH 2026</LI>
         <LI>Asterix & Obelix XXL3</LI>
         <LI>A WAY OUT</LI>
         <LI>ALAN WAKE REMASTER</LI>
         <LI>ASSETO CORSA</LI>
-        <li>Assassins.Creed.4.Black.Flag.Freedom.Cry</li>
+        <li>Assassins.Creed.4.Black.Flag</li>
         <LI>Assassin's Creed Rogue Remastered</LI>
         <LI>ASSASIN CREED MIRAGE </LI>
         <LI>Assassins.Creed.Valhalla</LI>
@@ -585,7 +680,7 @@
         <LI>CRASH TAG TEAM RACING</LI>
         <LI>DOWNLHILL DOMINATION</LI>
         <LI>DEATH STRANDING</LI>
-        <li>Demon.Slayer.Kimetsu.no.Yaiba.The.Hinokami.Chronicles.2</li>
+        <li>Demon.Slayer.Kimetsu.no.Yaiba.2</li>
         <li>Detroit Become Human™</li>
         <LI>Dead.Island.2</LI>
         <LI>Digimon World Next Order</LI>
@@ -605,7 +700,7 @@
         <LI>GOD OF WAR 3 REMASTER</LI>
         <li>God of War (2018)</li>
         <LI>GOD OF WAR RAGNAROK</LI>
-        <LI>GHOST_RECON_WILDLANDS_BOLIVIAN_MINIBUS</LI>
+        <LI>GHOST_RECON_WILDLANDS</LI>
         <li>Ghost of Tsushima</li>
         <li>Gran Turismo Sport</li>
         <LI>GRAND TURISMO 7</LI>
@@ -659,8 +754,8 @@
         <LI>Minecraft Dungeons Ultimate Edition-Nether</LI>
         <LI>Minecraft Legends</LI>
         <LI>Minecraft.Story.Mode.A.Telltale</LI>
-        <LI>Middle.Earth.Shadow.of.Mordor.GOTY</LI>
-        <lI>Mighty.Morphin.Power.Rangers.Ritas.Rewind</lI>
+        <LI>Middle Earth Shadow of Mordor GOTY</LI>
+        <lI>Mighty.Morphin.Power.Rangers</lI>
         <li>MOBILE SUIT GUNDAM EXTREME VS</li>
         <li>Monster Hunter World Iceborne</li>
         <LI>MOTO GP 25 </LI>
@@ -668,7 +763,7 @@
         <LI>MOSS</LI>
         <LI>MORTAL KOMBAT 11</LI>
         <LI>My_Time_at_Portia</LI>
-        <li>NARUTO.X.BORUTO.Ultimate.Ninja.STORM.CONNECTIONS</li>
+        <li>NARUTO.X.BORUTO CONNECTIONS</li>
         <LI>NASCAR 21 IGNITION</LI>
         <li>NEED FOR SPEED HEAT</li>
         <LI>NEED FOR SPEED MOSTWANTED</LI>
@@ -677,9 +772,9 @@
         <LI>Necromunda.Hired.Gun</LI>
         <LI>NHL 23 Hockey</LI>
         <LI>NICKELODEON ALL START</LI>
-        <LI>Ni.no.Kuni.Wrath.of.the.White.Witch.Remastered</LI>
+        <LI>Ni.no.Kuni Remastered</LI>
         <LI>NOBUNAGA</LI>
-        <LI>ONE.PUNCH.MAN.A.HERO.NOBODY.KNOWS</LI>
+        <LI>ONE.PUNCH.MAN.A.HERO.</LI>
         <LI>ONE PIECE PIRATES WARRIORS 4</LI>
         <LI>ONE_PIECE_BURNING_BLOOD</LI>
         <LI>One Piece Odyssey</LI>
@@ -749,20 +844,34 @@
         <LI>YAKUZA KIMAWI</LI>
         <LI>YAKUZA 0</LI>
         <LI>YAKUZA 6</LI>
-    
-      
-       
-        
-        
       </ul>
     </div>
-  </div>
 
-  <footer>
-    © 2026 Rons games - Daftar Game
-  </footer>
+  </div>
+</div>
+
+<footer>
+© 2026 Rons Games
+</footer>
+
+<a class="whatsapp" href="https://wa.me/628xxxxxxxxx" target="_blank">WhatsApp</a>
+
+<script>
+const search=document.getElementById("search");
+search.addEventListener("keyup",()=>{
+  const filter=search.value.toLowerCase();
+  document.querySelectorAll("li").forEach(li=>{
+    li.style.display = li.textContent.toLowerCase().includes(filter)
+      ? "block"
+      : "none";
+  });
+});
+</script>
+
 </body>
 </html>
+
+
 
 
 
